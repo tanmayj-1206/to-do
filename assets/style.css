@@ -1,0 +1,271 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: gray;
+}
+
+/* app container */
+
+#to-do-box{
+    background-color: white;
+    width: 700px;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 728px) {
+    #to-do-box{
+        width: 100%;
+    }
+    
+}
+
+/* heading */
+
+#app-heading{
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Zilla Slab', serif;
+    color: #504747;
+}
+
+/* form input */
+#form-input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+/* inputs */
+
+.container{
+    border-top: 2px solid lightgray;
+    padding: 10px 20px 25px;
+}
+
+.container:focus-within{
+    background-color: lightgray;
+}
+
+.container input{
+    border: none;
+    padding: 5px 0px;
+    font-weight: bold;
+    color: gray;
+    width: 100%;
+}
+
+::placeholder{
+    font-weight: 400;
+    color: rgb(204, 195, 195);
+}
+
+.container input:focus::placeholder{
+    color: gray;
+    font-weight: bold;
+}
+
+.container input:focus{
+    outline: none;
+    background-color: lightgray;
+}
+
+.hor-align{
+    display: flex;
+    flex-direction: row;
+}
+
+
+#category{
+    width: 50%;
+    border-right: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+}
+
+#due-date{
+    width: 50%;
+    border-bottom: 2px solid lightgray;
+}
+
+
+.task-input{
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #504747;
+}
+
+#category select{
+    border: none;
+    width: 100%;
+    outline: none;
+    color: gray;
+    font-weight: bold;
+    padding: 5px 0px;
+}
+
+#category select:focus option{
+    background-color: white;
+    color: gray;
+    font-weight: bold;
+}
+
+#category select:focus{
+    border: none;
+    outline: none;
+    background-color: lightgray;
+}
+
+/* buttons */
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.buttons button{
+    padding: 20px 5px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 200px;
+    margin-right: 5px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttons button span{
+    margin-right: 5px;
+}
+
+#add-task{
+    background-color: #363333;
+}
+
+#add-task:hover{
+    background-color: black;
+}
+
+#delete-task{
+    background-color: red;
+}
+
+#delete-task:hover{
+    background-color: #d31111;
+}
+
+@media screen and (max-width: 500px) {
+    .hor-align{
+        flex-direction: column;
+    }
+    #category{
+        box-sizing: border-box;
+        width: 100%;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    #due-date{
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .buttons{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+
+    .buttons button{
+        margin-top: 10px;
+        font-size: 1.1rem;
+    }
+}
+/* task list */
+
+#tasks{
+    padding: 5px 30px;
+}
+
+.task-name{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    border-top: 2px solid lightgray;
+    padding: 15px 8px;
+}
+
+.task-name input{
+    margin-right: 20px;
+    margin-top: 6px;
+    transform: scale(1.5);
+}
+
+.desc-date{
+    width: 75%;
+}
+
+.desc{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    word-spacing: 2px;
+    margin-bottom: 5px;
+    color: #5e4849;
+    word-wrap: break-word;
+}
+.date{
+    color: #ab9d9d;
+}
+.date span{
+    margin-right: 5px;
+}
+
+.task-name label{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.category-container{
+    margin-left: 5px;
+    width: 80px;
+    height: fit-content;
+    background-color: orange;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 4px;
+}
+
+.category-container span{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 500px) {
+    #tasks{
+        font-size: 0.65rem;
+    }
+    .desc{
+        font-size: 0.8rem;
+    }
+    .category-container{
+        width: 50px;
+    }
+}
