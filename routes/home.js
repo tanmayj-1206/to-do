@@ -6,8 +6,8 @@ const router = express.Router();
 
 
 router.get('/', homeController.home);
-router.use('/create-task', homeController.createTask);
-router.use('/delete-task', homeController.deleteTask);
+router.post('/create-task', homeController.createTask);
+router.post('/delete-task', homeController.deleteTask);
 
 
 module.exports = router;
